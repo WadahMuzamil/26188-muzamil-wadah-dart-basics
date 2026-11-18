@@ -1,5 +1,4 @@
-
- // Student: Wadah Muzamil Gaafar Mohammed
+// Student: Wadah Muzamil Gaafar Mohammed
 // Reg no: 26188
 const String regNo = '26188';
 final int d = int.parse(regNo[regNo.length - 1]);
