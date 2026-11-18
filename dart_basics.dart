@@ -8,7 +8,7 @@ final int t = int.parse(regNo.substring(regNo.length - 2));
 int countVowels(String text) {
   text = text.toLowerCase();
   int count = 0;
-  // Part G test variant (incorrect): count += 2;
+  // Part G first draft (incorrect): count += 2;
   int i = 0;
 
   while (i < text.length) {
@@ -62,7 +62,7 @@ void drawTriangle(int height) {
 
 // by WM
 int momoFee(int amount) {
-  // Part G test variant (incorrect): if (amount <= 150000) return 1500;
+  // Part G first draft (incorrect): if (amount <= 150000) return 1500;
   if (amount <= 0) return -1;
   if (amount <= 1000) return 20;
   if (amount <= 10000) return 100;
