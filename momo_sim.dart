@@ -45,15 +45,16 @@ bool isValidPin(String pin) {
         pin[i].compareTo('9') > 0) {
       return false;
     }
-
-    if (pin[i] != pin[0]) {
-      break;
-    }
-
     i++;
   }
 
-  if (i == 5) return false;
+  if (pin == '00000' || pin == '11111' ||
+      pin == '22222' || pin == '33333' ||
+      pin == '44444' || pin == '55555' ||
+      pin == '66666' || pin == '77777' ||
+      pin == '88888' || pin == '99999') {
+    return false;
+  }
 
   return true;
 }
