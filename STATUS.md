@@ -1,25 +1,19 @@
 # Assignment Status
 
 ## Done
-- A1 — Trace values and explanations prepared in answers.pdf.
-- A2 — Personal trace prepared for D = 8 and T = 88.
-- B2 — Implemented countVowels and called it with the full name.
+- A1–A2 — Personal trace outputs and explanations are included in answers.pdf.
+- B1 — String trace recorded; the Programiz result for city * 2 is noted for runtime confirmation.
+- B2 — Implemented countVowels; uppercase vowels are handled.
 - B3 — Implemented initials, including extra spaces and empty input.
-- C5 — Implemented right-aligned triangle using while loops; non-positive heights produce no output.
-- D2 — Implemented MoMo fee, phone masking, receipt loop and total.
-- F — Implemented MoMo simulator functions and added six extra formatRwf/isValidPin test calls with expected values in comments.
+- C1–C5 — Traces and explanations completed; triangle uses a while loop and handles non-positive heights.
+- D1–D2 — Function trace and MoMo receipt printer completed.
+- E — Both supplied bugs fixed and the case-sensitive palindrome choice explained.
+- F — MoMo simulator, PIN checks, money formatting, transactions, and extra test calls completed. Corrected actual output is recorded in answers.pdf.
+- G — Three first-draft debugging examples, exact outputs/errors, causes, fixes, and reflection recorded in answers.pdf.
+- Reflection — Part B was the most surprising part and took the longest.
 
 ## In progress
-- B1 — Trace explanations prepared; city * 2 is not valid Dart, so the supplied snippet cannot run unchanged.
-- C1 — Trace and explanation included in answers.pdf.
-- C2 — Both day = 1 and day = 2 traces and Dart switch explanation included in answers.pdf.
-- C3 — Trace and explanation included in answers.pdf.
-- C4 — Personal trace for D = 8 included in answers.pdf.
-- D1 — Trace and integer-division explanation included in answers.pdf.
-- E — Both supplied bugs and corrected functions explained in answers.pdf.
-- G — Must add three genuine first-draft errors, exact observed output/error, cause and fix from the student's own debugging history.
-- Runtime verification — Run both files with Dart 3 and confirm the calculated output.
+- Final submission — answers.pdf has been prepared locally and still needs to be added to this public repository.
 
 ## Stuck on
-
-- Runtime verification — Dart SDK was unavailable in the editing environment, so outputs in answers.pdf are calculated from code, not captured from a fresh Dart run.
+- B1 runtime detail — Programiz printed KigaliKigali for city * 2; this behavior should be checked against the instructor's Dart 3 runtime because String multiplication is not standard Dart 3 syntax.
