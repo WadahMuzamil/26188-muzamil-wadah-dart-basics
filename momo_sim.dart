@@ -4,8 +4,8 @@ const String regNo = '26188';
 final int d = int.parse(regNo[regNo.length - 1]);
 final int t = int.parse(regNo.substring(regNo.length - 2));
 
-// by WM
 int momoFee(int amount) {
+  // by WM
   if (amount <= 0) return -1;
   if (amount <= 1000) return 20;
   if (amount <= 10000) return 100;
@@ -13,8 +13,8 @@ int momoFee(int amount) {
   return 1500;
 }
 
-// by WM
 String formatRwf(int amount) {
+  // by WM
   String number = amount.abs().toString();
   String result = '';
   int i = 0;
@@ -35,8 +35,8 @@ String formatRwf(int amount) {
   return '$result RWF';
 }
 
-// by WM
 bool isValidPin(String pin) {
+  // by WM
   if (pin.length != 5 || pin == '12345') return false;
 
   int i = 0;
@@ -59,8 +59,8 @@ bool isValidPin(String pin) {
   return true;
 }
 
-// by WM
 int sendMoney(int balance, int amount) {
+  // by WM
   int fee = momoFee(amount);
 
   if (fee == -1) {
@@ -80,8 +80,8 @@ int sendMoney(int balance, int amount) {
   return balance;
 }
 
-// by WM
 int buyAirtime(int balance, int amount) {
+  // by WM
   if (amount < 100 || amount > 50000) {
     print('Failed: invalid airtime amount');
     return balance;
@@ -98,15 +98,15 @@ int buyAirtime(int balance, int amount) {
   return balance;
 }
 
-// by WM
 void main() {
+  // by WM
   print('Reg no: $regNo | D = $d | T = $t');
 
   print(isValidPin('12345')); // false
   print(isValidPin('77777')); // false
   print(isValidPin('4821'));  // false
   print(isValidPin('48a21')); // false
-  print(isValidPin('48218')); // true
+  print(isValidPin('4821$d')); // true (D is 8, so the PIN is 48218)
 
   int balance = 20000 + t * 500;
   print('Starting balance: ${formatRwf(balance)}');
@@ -124,10 +124,11 @@ void main() {
 
   print('Final balance: ${formatRwf(balance)}');
 
-print(formatRwf(100000));   // 100,000 RWF
-print(formatRwf(-999));     // -999 RWF
-print(formatRwf(1000000));  // 1,000,000 RWF
-print(isValidPin('00000')); // false (same digit five times)
-print(isValidPin(''));      // false (empty string, might break the code)
-print(isValidPin('1234 ')); // false (space is not a digit)
+  // My own tests
+  print(formatRwf(100000));   // 100,000 RWF
+  print(formatRwf(-999));     // -999 RWF
+  print(formatRwf(1000000));  // 1,000,000 RWF
+  print(isValidPin('00000')); // false (same digit five times)
+  print(isValidPin(''));      // false (empty string, might break the code)
+  print(isValidPin('1234 ')); // false (a space is not a digit)
 }
