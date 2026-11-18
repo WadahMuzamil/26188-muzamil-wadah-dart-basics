@@ -124,11 +124,10 @@ void main() {
 
   print('Final balance: ${formatRwf(balance)}');
 
-  // Extra tests
-  print(formatRwf(0));        // 0 RWF
-  print(formatRwf(999));      // 999 RWF
-  print(formatRwf(1000));     // 1,000 RWF
-  print(formatRwf(-5000));    // -5,000 RWF
-  print(formatRwf(1250000));  // 1,250,000 RWF
-  print(isValidPin('11111')); // false
+print(formatRwf(100000));   // 100,000 RWF
+print(formatRwf(-999));     // -999 RWF
+print(formatRwf(1000000));  // 1,000,000 RWF
+print(isValidPin('00000')); // false (same digit five times)
+print(isValidPin(''));      // false (empty string, might break the code)
+print(isValidPin('1234 ')); // false (space is not a digit)
 }
