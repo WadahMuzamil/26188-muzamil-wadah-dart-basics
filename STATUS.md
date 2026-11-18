@@ -11,9 +11,9 @@
 - F — MoMo simulator, PIN checks, money formatting, transactions, and extra test calls completed. Corrected actual output is recorded in answers.pdf.
 - G — Three first-draft debugging examples, exact outputs/errors, causes, fixes, and reflection recorded in answers.pdf.
 - Reflection — Part B was the most surprising part and took the longest.
-
-## In progress
 - Final submission — answers.pdf has been prepared locally and still needs to be added to this public repository.
+## In progress
+
 
 ## Stuck on
 - B1 runtime detail — Programiz printed KigaliKigali for city * 2; this behavior should be checked against the instructor's Dart 3 runtime because String multiplication is not standard Dart 3 syntax.
